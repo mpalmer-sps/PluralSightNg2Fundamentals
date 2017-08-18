@@ -2,7 +2,7 @@
 
 @Component({
     selector: 'events-app',
-    template: '<h2>Hello World from the Event Component!</h2>'
+    template: '<events-list></events-list>'
 })
 
 export class EventsAppComponent {

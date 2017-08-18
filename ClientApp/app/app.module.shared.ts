@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { EventsAppComponent } from './components/events/events-app.component';
+import { EventListComponent } from "./components/events/events-list.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        EventsAppComponent
+        EventsAppComponent,
+        EventListComponent
     ],
     imports: [
         CommonModule,
