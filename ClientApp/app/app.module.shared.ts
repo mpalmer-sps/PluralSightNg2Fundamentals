@@ -11,6 +11,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { EventsAppComponent } from './components/events/events-app.component';
 import { EventsListComponent } from './components/events/events-list.component';
+import { EventPreviewComponent } from "./components/events/eventpreview.component";
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { EventsListComponent } from './components/events/events-list.component';
         FetchDataComponent,
         HomeComponent,
         EventsAppComponent,
-        EventsListComponent
+        EventsListComponent,
+        EventPreviewComponent
     ],
     imports: [
         CommonModule,
