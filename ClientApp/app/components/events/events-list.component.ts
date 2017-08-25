@@ -2,22 +2,27 @@
 
 @Component({
     selector: 'events-list',
-    template: `
+    template: `        
+        <h1>Upcoming Angular 2+ events</h1>
         <hr/>
-        <div>This is a line of text from the events-list component</div>
-        <hr/>
-        <div>{{strInputVarfromParentEventsAppComponent}}</div>
-        <hr/>
-        <eventpreview [eventObjFromParent]=conference></eventpreview>
+        <event-thumbnail [eventObjFromParent]=conference></event-thumbnail>
     `
     
 })
 export class EventsListComponent {
 
-    @Input('strInputVarFromEventsAppComponent') strInputVarfromParentEventsAppComponent: string;
-
     conference: any = {
-        name: 'Angular Seattle Fest Conference!'
+        name: 'Angular Seattle Fest Conference!',
+        id: 1,
+        date: '9/26/2017',
+        time: '10:00 am',
+        price: 599.99,
+        imageUrl: '/app/assets/images/angularconnect-shield.png',
+        location: {
+            address: '18007 115th St Ct E',
+            city: 'Bonney Lake',
+            country: 'USA'
+        }
     }
 
     constructor() {

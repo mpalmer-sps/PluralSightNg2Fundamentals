@@ -2,14 +2,11 @@
 
 @Component({
     selector: 'events-app',
-    template: `
-        <div>This is a line of text from the Events-App Component</div>
-        <events-list [strInputVarFromEventsAppComponent]="strVarfromEventsAppComponent"></events-list>
+    template: `        
+        <events-list></events-list>
     `
 })
 export class EventsAppComponent {
-
-    strVarfromEventsAppComponent: string = 'This is from the Events-App Component';
 
     constructor() {
     }
