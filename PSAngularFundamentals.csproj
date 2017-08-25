@@ -266,6 +266,9 @@
     <None Update="ClientApp\app\components\events\event-thumbnail.component.ts">
       <DependentUpon>event-thumbnail.component.html</DependentUpon>
     </None>
+    <None Update="ClientApp\app\components\nav\navbar.component.ts">
+      <DependentUpon>navbar.component.html</DependentUpon>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

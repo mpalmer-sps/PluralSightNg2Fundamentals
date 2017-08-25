@@ -5,7 +5,13 @@
     template: `        
         <h1>Upcoming Angular 2+ events</h1>
         <hr/>
-        <event-thumbnail [eventObjFromParent]=conference></event-thumbnail>
+        <event-thumbnail 
+            #thumbnail 
+            (eventClickFromChild)="handleChildEventClicked($event)" 
+            [eventObjFromParent]=conference>
+        </event-thumbnail>
+        <h4>{{thumbnail.businessTime}}</h4>
+        <button class="btn btn-primary" (click)="thumbnail.logFoo()">Variable Ref to Thumbnail</button>
     `
     
 })
@@ -23,6 +29,10 @@ export class EventsListComponent {
             city: 'Bonney Lake',
             country: 'USA'
         }
+    }
+
+    handleChildEventClicked(message: string): void {
+        console.log('received from child: ', message);
     }
 
     constructor() {
