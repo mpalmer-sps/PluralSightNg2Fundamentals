@@ -1,0 +1,11 @@
+﻿<h1>Upcoming Angular 2+ events</h1>
+<hr />
+<div class="row">
+    <div *ngFor="let event of events" class="col-md-6">
+        <event-thumbnail #thumbnail                         
+                         (eventClickFromChild)="handleChildEventClicked($event)"
+                         [eventObjFromParent]=event>
+        </event-thumbnail>
+    </div>
+</div>
+<button class="btn btn-primary" (click)="thumbnail.logFoo()">Variable Ref to Thumbnail</button>

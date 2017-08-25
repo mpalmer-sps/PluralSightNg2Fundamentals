@@ -2,7 +2,12 @@
 
 @Component({
     selector: 'event-thumbnail',
-    templateUrl: './event-thumbnail.component.html'
+    templateUrl: './event-thumbnail.component.html',
+    styles: [`
+        .thumbnail { min-height: 250px; }
+        .pad-left { margin-left: 10px; }
+        .well div { color: #bbb; }
+    `]
 })
 export class EventThumbnailComponent {
 
@@ -16,8 +21,6 @@ export class EventThumbnailComponent {
     logFoo() {
         console.log('FOO from child');
     }
-
-    businessTime: string = "It's business time!";
 
     constructor() {
 
