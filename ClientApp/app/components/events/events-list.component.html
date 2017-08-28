@@ -6,6 +6,7 @@
                          (eventClickFromChild)="handleChildEventClicked($event)"
                          [eventObjFromParent]=event>
         </event-thumbnail>
+        <span>{{thumbnail.foo}}</span>
     </div>
 </div>
 <button class="btn btn-primary" (click)="thumbnail.logFoo()">Variable Ref to Thumbnail</button>
