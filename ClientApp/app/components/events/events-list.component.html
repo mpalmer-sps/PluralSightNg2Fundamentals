@@ -3,7 +3,7 @@
 <div class="row">
     <div *ngFor="let event of events" class="col-md-6">
         <event-thumbnail #thumbnail                         
-                         (eventClickFromChild)="handleChildEventClicked($event)"
+                         (click)="handleChildEventClicked(event.name)"
                          [eventObjFromParent]=event>
         </event-thumbnail>
         <span>{{thumbnail.foo}}</span>

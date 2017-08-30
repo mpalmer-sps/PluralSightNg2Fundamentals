@@ -31,8 +31,6 @@ export class EventThumbnailComponent {
             return 'green bold'
         }
         return ''
-        
-        
     }
 
     public logFoo() {

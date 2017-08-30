@@ -305,6 +305,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ClientApp\app\components\app\app.component.css">
+      <DependentUpon>app.component.html</DependentUpon>
+    </None>
+    <None Update="ClientApp\app\components\app\app.component.ts">
+      <DependentUpon>app.component.html</DependentUpon>
+    </None>
     <None Update="ClientApp\app\components\events\event-thumbnail.component.ts">
       <DependentUpon>event-thumbnail.component.html</DependentUpon>
     </None>

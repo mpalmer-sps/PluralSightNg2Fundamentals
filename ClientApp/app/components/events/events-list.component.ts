@@ -1,5 +1,8 @@
-﻿import { Component, Input, OnInit } from '@angular/core';
+﻿import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
+
+
 import { EventService } from "../shared/event.service";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     selector: 'events-list',
@@ -10,12 +13,12 @@ export class EventsListComponent implements OnInit {
     events: any[];
 
     // Inject the Event Service Dependency
-    constructor(private eventService: EventService) {
-        
+    constructor(private eventService: EventService, public toastr: ToastsManager, vcr: ViewContainerRef) {
+        this.toastr.setRootViewContainerRef(vcr);
     }
 
     handleChildEventClicked(message: string): void {
-        console.log('received from child with button click inside child: ', message);
+        this.toastr.success(message);
     }
 
     ngOnInit() {
