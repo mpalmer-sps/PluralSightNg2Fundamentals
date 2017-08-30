@@ -10,6 +10,8 @@ import { EventsAppComponent } from './components/events/events-app.component';
 import { EventsListComponent } from './components/events/events-list.component';
 import { EventThumbnailComponent } from './components/events/event-thumbnail.component';
 import { NavBarComponent } from "./components/nav/navbar.component";
+import { EventService } from "./components/shared/event.service";
+
 
 @NgModule({
     declarations: [
@@ -18,7 +20,7 @@ import { NavBarComponent } from "./components/nav/navbar.component";
         EventsAppComponent,
         EventsListComponent,
         EventThumbnailComponent,
-        NavBarComponent
+        NavBarComponent        
     ],
     imports: [
         CommonModule,
@@ -29,6 +31,9 @@ import { NavBarComponent } from "./components/nav/navbar.component";
             { path: 'home', component: HomeComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        EventService
     ]
 })
 export class AppModuleShared {

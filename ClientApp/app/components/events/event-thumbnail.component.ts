@@ -21,7 +21,7 @@ export class EventThumbnailComponent {
     }
 
     getStartTimeClass() {
-        // one approach for assigning classes is to return an object like the example below
+        //// one approach for assigning classes is to return an object like the example below
         // const isEarlyStart = this.event && this.event.time === '8:00 am';
         // return { green: isEarlyStart, bold: isEarlyStart };
 
