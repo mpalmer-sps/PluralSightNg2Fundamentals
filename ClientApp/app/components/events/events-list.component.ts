@@ -1,8 +1,8 @@
 ﻿import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 
-
 import { EventService } from "../shared/event.service";
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+//import { ToastrService } from "../shared/toastr.service";
+import { ToastsManager } from "ng2-toastr/ng2-toastr";
 
 @Component({
     selector: 'events-list',

@@ -12,7 +12,9 @@ import { EventThumbnailComponent } from './components/events/event-thumbnail.com
 import { NavBarComponent } from "./components/nav/navbar.component";
 import { EventService } from "./components/shared/event.service";
 
+// toastr portion
 import { ToastModule } from "ng2-toastr/ng2-toastr";
+import { ToastrService } from "./components/shared/toastr.service";
 
 
 @NgModule({
@@ -27,8 +29,8 @@ import { ToastModule } from "ng2-toastr/ng2-toastr";
     imports: [
         CommonModule,
         HttpModule,
-        FormsModule,
-        ToastModule.forRoot(),
+        FormsModule,        
+        ToastModule.forRoot(),        
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
@@ -36,6 +38,7 @@ import { ToastModule } from "ng2-toastr/ng2-toastr";
         ])
     ],
     providers: [
+        ToastrService,
         EventService
     ]
 })
