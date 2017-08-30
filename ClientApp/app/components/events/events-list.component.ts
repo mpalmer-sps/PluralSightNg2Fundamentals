@@ -15,7 +15,7 @@ export class EventsListComponent implements OnInit {
     }
 
     handleChildEventClicked(message: string): void {
-        console.log('received from child: ', message);
+        console.log('received from child with button click inside child: ', message);
     }
 
     ngOnInit() {

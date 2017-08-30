@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppModuleShared } from './app.module.shared';
 import { AppComponent } from './components/app/app.component';
 import { EventService } from "./components/shared/event.service";
+import { ToastModule } from "ng2-toastr/ng2-toastr";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
         BrowserModule,
-        AppModuleShared
+        BrowserAnimationsModule,
+        ToastModule.forRoot(),
+        AppModuleShared        
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },

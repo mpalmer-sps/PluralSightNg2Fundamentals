@@ -35,7 +35,7 @@ export class EventThumbnailComponent {
         
     }
 
-    logFoo() {
+    public logFoo() {
         console.log('FOO from child');
     }
 

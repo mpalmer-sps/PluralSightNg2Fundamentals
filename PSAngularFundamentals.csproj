@@ -39,6 +39,20 @@
     <Content Include="wwwroot\node_modules\jquery\external\sizzle\LICENSE.txt" />
     <Content Include="wwwroot\node_modules\jquery\LICENSE.txt" />
     <Content Include="wwwroot\node_modules\jquery\package.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.min.css" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\ng2-toastr.css" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\ng2-toastr.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\ng2-toastr.ngsummary.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\package.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\src\toast-container.component.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\src\toast-manager.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\src\toast-options.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\src\toast.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\src\toast.module.metadata.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\toastr-examples.jpg" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\tsconfig.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\tslint.json" />
+    <Content Include="wwwroot\node_modules\ng2-toastr\typings.json" />
     <Content Include="wwwroot\node_modules\ng2f-bootstrap\dist\bootstrap.min.css" />
     <Content Include="wwwroot\node_modules\ng2f-bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="wwwroot\node_modules\ng2f-bootstrap\fonts\glyphicons-halflings-regular.ttf" />
@@ -256,10 +270,38 @@
     <None Include="wwwroot\node_modules\jquery\src\var\support.js" />
     <None Include="wwwroot\node_modules\jquery\src\var\toString.js" />
     <None Include="wwwroot\node_modules\jquery\src\wrap.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\.npmignore" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.js.gz" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.js.map" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.js.map.gz" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.min.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.min.js.gz" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.min.js.map" />
+    <None Include="wwwroot\node_modules\ng2-toastr\bundles\ng2-toastr.min.js.map.gz" />
+    <None Include="wwwroot\node_modules\ng2-toastr\gulpfile.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\make.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\ng2-toastr.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\README.md" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\.npmignore" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\toast-container.component.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\toast-manager.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\toast-options.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\toast.js" />
+    <None Include="wwwroot\node_modules\ng2-toastr\src\toast.module.js" />
     <None Include="wwwroot\node_modules\ng2f-bootstrap\.npmignore" />
     <None Include="wwwroot\node_modules\ng2f-bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <None Include="wwwroot\node_modules\ng2f-bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="wwwroot\node_modules\ng2f-bootstrap\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\ng2-toastr.d.ts" />
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\src\toast-container.component.d.ts" />
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\src\toast-manager.d.ts" />
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\src\toast-options.d.ts" />
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\src\toast.d.ts" />
+    <TypeScriptCompile Include="wwwroot\node_modules\ng2-toastr\src\toast.module.d.ts" />
   </ItemGroup>
 
   <ItemGroup>

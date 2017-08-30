@@ -12,6 +12,8 @@ import { EventThumbnailComponent } from './components/events/event-thumbnail.com
 import { NavBarComponent } from "./components/nav/navbar.component";
 import { EventService } from "./components/shared/event.service";
 
+import { ToastModule } from "ng2-toastr/ng2-toastr";
+
 
 @NgModule({
     declarations: [
@@ -26,6 +28,7 @@ import { EventService } from "./components/shared/event.service";
         CommonModule,
         HttpModule,
         FormsModule,
+        ToastModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
