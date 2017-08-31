@@ -11,6 +11,8 @@ import { EventsListComponent } from './components/events/events-list.component';
 import { EventThumbnailComponent } from './components/events/event-thumbnail.component';
 import { NavBarComponent } from "./components/nav/navbar.component";
 import { EventService } from "./components/shared/event.service";
+import { EventDetailComponent } from "./components/events/event-details.component";
+
 
 // toastr portion
 import { ToastModule } from "ng2-toastr/ng2-toastr";
@@ -24,6 +26,7 @@ import { ToastrService } from "./components/shared/toastr.service";
         EventsAppComponent,
         EventsListComponent,
         EventThumbnailComponent,
+        EventDetailComponent,
         NavBarComponent        
     ],
     imports: [
@@ -34,6 +37,8 @@ import { ToastrService } from "./components/shared/toastr.service";
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'events', component: EventsListComponent },
+            { path: 'events/:id', component: EventDetailComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],

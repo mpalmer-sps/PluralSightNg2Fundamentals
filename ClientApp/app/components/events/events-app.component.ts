@@ -2,8 +2,7 @@
 
 @Component({
     selector: 'events-app',
-    template: `  
-        <nav-bar></nav-bar>
+    template: `          
         <events-list></events-list>
     `
 })

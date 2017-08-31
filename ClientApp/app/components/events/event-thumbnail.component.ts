@@ -16,9 +16,10 @@ export class EventThumbnailComponent {
     @Input('eventObjFromParent') event: any;
     @Output() eventClickFromChild = new EventEmitter();
 
-    handledClickMe() {
-        this.eventClickFromChild.emit(this.event.name);
-    }
+    // event handler for a click event
+    //handledClickMe() {
+    //    this.eventClickFromChild.emit(this.event.name);
+    //}
 
     getStartTimeClass() {
         //// one approach for assigning classes is to return an object like the example below
