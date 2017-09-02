@@ -12,11 +12,12 @@ import { EventThumbnailComponent } from './components/events/event-thumbnail.com
 import { NavBarComponent } from "./components/nav/navbar.component";
 import { EventService } from "./components/shared/event.service";
 import { EventDetailComponent } from "./components/events/event-details.component";
-
+import { CreateEventComponent } from "./components/events/create-event.component";
 
 // toastr portion
 import { ToastModule } from "ng2-toastr/ng2-toastr";
 import { ToastrService } from "./components/shared/toastr.service";
+
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ToastrService } from "./components/shared/toastr.service";
         EventsListComponent,
         EventThumbnailComponent,
         EventDetailComponent,
-        NavBarComponent        
+        NavBarComponent,
+        CreateEventComponent
     ],
     imports: [
         CommonModule,
@@ -37,8 +39,9 @@ import { ToastrService } from "./components/shared/toastr.service";
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'events', component: EventsListComponent },
-            { path: 'events/:id', component: EventDetailComponent },
+            { path: 'events/new', component: CreateEventComponent },
+            { path: 'events', component: EventsListComponent },            
+            { path: 'events/:id', component: EventDetailComponent },            
             { path: '**', redirectTo: 'home' }
         ])
     ],

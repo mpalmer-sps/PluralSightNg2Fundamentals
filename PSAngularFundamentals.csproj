@@ -311,6 +311,9 @@
     <None Update="ClientApp\app\components\app\app.component.ts">
       <DependentUpon>app.component.html</DependentUpon>
     </None>
+    <None Update="ClientApp\app\components\events\create-event.component.ts">
+      <DependentUpon>create-event.component.html</DependentUpon>
+    </None>
     <None Update="ClientApp\app\components\events\event-details.component.ts">
       <DependentUpon>event-details.component.html</DependentUpon>
     </None>
