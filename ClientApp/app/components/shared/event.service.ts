@@ -1,4 +1,6 @@
 ﻿import { Injectable } from "@angular/core";
+import { Subject } from 'rxjs/Rx';
+
 
 
 @Injectable()
@@ -6,7 +8,16 @@ export class EventService {
         
 
     getEvents() {
-        return EVENTS;
+        // async call for events
+        // SetTime is in place to simulate a 2000 MS time delay
+        // Subject is a type of Observable
+        // we add data to that Observables Stream with this call 'subject.next(EVENTS)'
+        // then we rturn the observable 'subject'
+        // this means that the consumer of the data (eventslist) needs to consume in a different way
+        let subject = new Subject();
+        setTimeout(() => { subject.next(EVENTS); subject.complete(); }, 100);        
+        return subject;
+        
     }
 
     getEvent(id: number) {
@@ -17,7 +28,7 @@ export class EventService {
 const EVENTS = [
     {
         id: 1,
-        name: 'Angular Connect',
+        name: 'Angular Connecticles',
         date: '9/26/2036',
         time: '10:00 am',
         price: 599.99,
