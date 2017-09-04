@@ -326,10 +326,12 @@
     <None Update="ClientApp\app\components\nav\navbar.component.ts">
       <DependentUpon>navbar.component.html</DependentUpon>
     </None>
+    <None Update="ClientApp\app\components\shared\404.component.ts">
+      <DependentUpon>404.component.html</DependentUpon>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\app\assets\images\" />
     <Folder Include="wwwroot\images\events\" />
   </ItemGroup>
 

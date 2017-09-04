@@ -6,6 +6,7 @@ import { EventService } from "./components/shared/event.service";
 import { ToastModule } from "ng2-toastr/ng2-toastr";
 import { ToastrService } from "./components/shared/toastr.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { EventRouteActivator } from "./components/events/event-route-activator.service";
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },        
         ToastrService,
-        EventService
+        EventService,
+        EventRouteActivator
     ]
 })
 export class AppModule {

@@ -18,6 +18,10 @@ import { CreateEventComponent } from "./components/events/create-event.component
 import { ToastModule } from "ng2-toastr/ng2-toastr";
 import { ToastrService } from "./components/shared/toastr.service";
 
+// shared components
+import { Error404Component } from "./components/shared/404.component";
+import { EventRouteActivator } from "./components/events/event-route-activator.service";
+
 
 
 @NgModule({
@@ -29,7 +33,8 @@ import { ToastrService } from "./components/shared/toastr.service";
         EventThumbnailComponent,
         EventDetailComponent,
         NavBarComponent,
-        CreateEventComponent
+        CreateEventComponent,
+        Error404Component
     ],
     imports: [
         CommonModule,
@@ -40,14 +45,16 @@ import { ToastrService } from "./components/shared/toastr.service";
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'events/new', component: CreateEventComponent },
-            { path: 'events', component: EventsListComponent },            
-            { path: 'events/:id', component: EventDetailComponent },            
+            { path: 'events', component: EventsListComponent },
+            { path: 'events/:id', component: EventDetailComponent, canActivate: [EventRouteActivator] },
+            { path: '404', component: Error404Component },
             { path: '**', redirectTo: 'home' }
         ])
     ],
     providers: [
         ToastrService,
-        EventService
+        EventService,
+        EventRouteActivator
     ]
 })
 export class AppModuleShared {
