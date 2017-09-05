@@ -22,6 +22,8 @@ import { ToastrService } from "./components/shared/toastr.service";
 import { Error404Component } from "./components/shared/404.component";
 import { EventRouteActivator } from "./components/events/event-route-activator.service";
 import { EventListResolver } from "./components/events/events-list-resolver.service";
+import { UsersModule } from "./user/user.module";
+
 
 
 
@@ -50,8 +52,10 @@ import { EventListResolver } from "./components/events/events-list-resolver.serv
             { path: 'events', component: EventsListComponent, resolve: { events:EventListResolver } },
             { path: 'events/:id', component: EventDetailComponent, canActivate: [EventRouteActivator] },
             { path: '404', component: Error404Component },
+            //{ path: 'user', loadChildren:'./app/user/user.module#UsersModule'},
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+        UsersModule
     ],
     providers: [
         ToastrService,

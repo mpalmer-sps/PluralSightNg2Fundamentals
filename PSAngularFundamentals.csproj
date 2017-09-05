@@ -329,6 +329,9 @@
     <None Update="ClientApp\app\components\shared\404.component.ts">
       <DependentUpon>404.component.html</DependentUpon>
     </None>
+    <None Update="ClientApp\app\user\profile.component.ts">
+      <DependentUpon>profile.component.html</DependentUpon>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
