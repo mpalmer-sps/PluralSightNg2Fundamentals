@@ -52,7 +52,7 @@ import { UsersModule } from "./user/user.module";
             { path: 'events', component: EventsListComponent, resolve: { events:EventListResolver } },
             { path: 'events/:id', component: EventDetailComponent, canActivate: [EventRouteActivator] },
             { path: '404', component: Error404Component },
-            { path: 'user', loadChildren:'app/user/user.module#UsersModule'},
+            //{ path: 'user', loadChildren:'app/user/user.module#UsersModule'},
             { path: '**', redirectTo: 'home' }
         ]),
         UsersModule
